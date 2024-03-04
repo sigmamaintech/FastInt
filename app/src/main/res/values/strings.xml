@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">FastInt</string>
+    <string name="Algorithms" translatable="true">Algorithms</string>
+    <string name="News" translatable="true">News</string>
+    <string name="Themes" translatable="true">Themes</string>
+    <string name="Tasks" translatable="true">Tasks</string>
+    <string name="EnterLogin">Enter Login</string>
+    <string name="EnterPassword">Enter Password</string>
+    <string name="Authorization">Authorization</string>
+    <string name="Registration">Registration</string>
+    <string name="NextPage">Next page</string>
+    <string name="EnterName">Enter a name</string>
+    <string name="EnterSurname">Enter a surname</string>
+    <string name="CTNewPassword">Confirm the new password</string>
+    <string name="Class">Select a class</string>
+    <string name="Teacher">Teacher</string>
+    <string name="Student">Student</string>
+    <string name="FatherName">Enter father name</string>
+</resources>

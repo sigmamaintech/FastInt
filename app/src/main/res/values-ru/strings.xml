@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Algorithms">Алгоритмы</string>
+    <string name="News">Новости</string>
+    <string name="Themes">Темы</string>
+    <string name="Tasks">Задания</string>
+    <string name="EnterLogin">Введите логин</string>
+    <string name="EnterPassword">Введите пароль</string>
+    <string name="Authorization">Авторизоваться</string>
+    <string name="Registration">Зарегистрироваться</string>
+    <string name="NextPage">Следующая страница</string>
+    <string name="EnterName">Введите имя</string>
+    <string name="EnterSurname">Введите фамилию</string>
+    <string name="CTNewPassword">Подтвердите пароль</string>
+    <string name="Class">Класс обучающегося</string>
+    <string name="Teacher">Учитель</string>
+    <string name="Student">Ученик</string>
+    <string name="FatherName">Введите отчество</string>
+</resources>
