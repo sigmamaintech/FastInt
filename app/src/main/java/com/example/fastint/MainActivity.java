@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.sign_in);
     }
     public void startSU (View v) {
-        Intent to_sign_up = new Intent(this, Sign_up2.class);
+        Intent to_sign_up = new Intent(this, Sign_up.class);
         startActivity(to_sign_up);
     }
 }
