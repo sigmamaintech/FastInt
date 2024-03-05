@@ -13,8 +13,8 @@
     <fragment
         android:id="@+id/profileFramgent"
         android:name="com.example.fastint.ProfileFramgent"
-        android:label="fragment_profile_framgent"
-        tools:layout="@layout/fragment_profile_framgent" />
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/libraryFragment"
         android:name="com.example.fastint.LibraryFragment"

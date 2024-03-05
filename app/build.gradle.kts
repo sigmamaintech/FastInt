@@ -6,6 +6,13 @@ android {
     namespace = "com.example.fastint"
     compileSdk = 34
 
+    android {
+        buildFeatures {
+            dataBinding = true
+            viewBinding = true
+        }
+    }
+
     defaultConfig {
         applicationId = "com.example.fastint"
         minSdk = 24
