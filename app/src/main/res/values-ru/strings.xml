@@ -16,4 +16,8 @@
     <string name="Teacher">Учитель</string>
     <string name="Student">Ученик</string>
     <string name="FatherName">Введите отчество</string>
+    <string name="Library">Библиотека</string>
+    <string name="Tests">Тесты</string>
+    <string name="Profile">Профиль</string>
+
 </resources>

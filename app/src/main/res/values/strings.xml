@@ -16,4 +16,7 @@
     <string name="Teacher">Teacher</string>
     <string name="Student">Student</string>
     <string name="FatherName">Enter father name</string>
+    <string name="Library">Library</string>
+    <string name="Tests">Tests</string>
+    <string name="Profile">Profile</string>
 </resources>

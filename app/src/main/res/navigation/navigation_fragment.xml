@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_fragment"
+    app:startDestination="@id/newsFragment">
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.fastint.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/profileFramgent"
+        android:name="com.example.fastint.ProfileFramgent"
+        android:label="fragment_profile_framgent"
+        tools:layout="@layout/fragment_profile_framgent" />
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.example.fastint.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" />
+    <fragment
+        android:id="@+id/testsFragment"
+        android:name="com.example.fastint.TestsFragment"
+        android:label="fragment_tests"
+        tools:layout="@layout/fragment_tests" />
+</navigation>
