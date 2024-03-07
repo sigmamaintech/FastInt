@@ -1,51 +1,22 @@
 package com.example.fastint;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
-import com.example.fastint.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    ActivityMainBinding binding;
+    ActivityMainBinding
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        replaceFragment(new NewsFragment());
-
-        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
-            if(item.getItemId() == R.id.newsFragment)
-                replaceFragment(new NewsFragment());
-            else if(item.getItemId() == R.id.libraryFragment)
-                replaceFragment(new LibraryFragment());
-            else if(item.getItemId() == R.id.testsFragment)
-                replaceFragment(new TestsFragment());
-            else if(item.getItemId() == R.id.profileFramgent)
-                replaceFragment(new ProfileFramgent());
-            return true;
-        });
+        setContentView(R.layout.sign_in);
     }
-
-    private void replaceFragment(Fragment fragment)
-    {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.bottomNavigationView, fragment);
-        fragmentTransaction.commit();
-    }
-
-    /*public void startSU (View v) {
+    public void startSU (View v) {
         Intent to_sign_up = new Intent(this, Sign_up.class);
         startActivity(to_sign_up);
-    }*/
+    }
 }
