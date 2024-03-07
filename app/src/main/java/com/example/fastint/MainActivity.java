@@ -10,7 +10,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.fastint.databinding.ActivityMainBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             else if(item.getItemId() == R.id.testsFragment)
                 replaceFragment(new TestsFragment());
             else if(item.getItemId() == R.id.profileFramgent)
-                replaceFragment(new ProfileFramgent());
+                replaceFragment(new ProfileFragment());
             return true;
         });
     }
@@ -44,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    /*public void startSU (View v) {
+    public void startSU (View v) {
         Intent to_sign_up = new Intent(this, Sign_up.class);
         startActivity(to_sign_up);
-    }*/
+    }
 }

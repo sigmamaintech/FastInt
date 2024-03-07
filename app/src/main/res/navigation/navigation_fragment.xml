@@ -11,8 +11,8 @@
         android:label="fragment_news"
         tools:layout="@layout/fragment_news" />
     <fragment
-        android:id="@+id/profileFramgent"
-        android:name="com.example.fastint.ProfileFramgent"
+        android:id="@+id/profileFragment"
+        android:name="com.example.fastint.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment

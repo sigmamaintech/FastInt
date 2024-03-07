@@ -60,7 +60,7 @@
         android:layout_marginEnd="30dp"
         android:onClick="startSU2"
         android:text="@string/NextPage"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/CNewPassword" />
@@ -77,7 +77,8 @@
         android:textColorHint="#546E7A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/newPassword"
+        android:autofillHints="" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
