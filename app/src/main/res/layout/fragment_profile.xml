@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#AA00FF"
-    tools:context=".TestsFragment">
+    tools:context=".ProfileFramgent">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="30sp"
         android:gravity="center"
+        android:text="@string/Profile"
         android:textColor="@color/white"
-        android:text="@string/Tests" />
+        android:textSize="30sp" />
 
 </FrameLayout>
