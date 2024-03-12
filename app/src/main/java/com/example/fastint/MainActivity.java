@@ -2,7 +2,6 @@ package com.example.fastint;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -10,7 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.fastint.databinding.ActivityMainBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -19,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        //setContentView(binding.getRoot());
 
         replaceFragment(new NewsFragment());
 
@@ -34,18 +33,15 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new ProfileFramgent());
             return true;
         });
+        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+            startActivity(new Intent(MainActivity.this, Sign_in.class));
+        }
     }
 
-    private void replaceFragment(Fragment fragment)
-    {
+    private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout, fragment);
         fragmentTransaction.commit();
     }
-
-    /*public void startSU (View v) {
-        Intent to_sign_up = new Intent(this, Sign_up.class);
-        startActivity(to_sign_up);
-    }*/
 }

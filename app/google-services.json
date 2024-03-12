@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "400424852454",
+    "project_id": "fastint-aecdd",
+    "storage_bucket": "fastint-aecdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400424852454:android:ae1dfee8e476b51e221427",
+        "android_client_info": {
+          "package_name": "com.example.fastint"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBemcXp-q0bK06EiDMBmcA3E3whECjyeZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

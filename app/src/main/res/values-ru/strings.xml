@@ -19,5 +19,6 @@
     <string name="Library">Библиотека</string>
     <string name="Tests">Тесты</string>
     <string name="Profile">Профиль</string>
+    <string name="NotSU_SI">Поля логина или пароля не могут быть пустыми</string>
 
 </resources>
