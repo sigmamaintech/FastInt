@@ -1,18 +1,10 @@
 package com.example.fastint;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
-import android.content.Intent;
-
-import androidx.annotation.NonNull;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.IgnoreExtraProperties;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.IgnoreExtraProperties;
+
+import java.util.Objects;
 
 @IgnoreExtraProperties
 public class User {
@@ -43,14 +35,11 @@ public class User {
         //DatabaseReference UserDatabase;
         //UserDatabase = FirebaseDatabase.getInstance().getReference();
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            User user = new User(username, email, password, name, surname, selclass, isTeacher);
-                            FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user);
-                        }
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        User user = new User(username, email, password, name, surname, selclass, isTeacher);
+                        FirebaseDatabase.getInstance().getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid())
+                                .setValue(user);
                     }
                 });
     }
