@@ -1,13 +1,22 @@
 package com.example.fastint;
 
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fastint.databinding.ActivitySignUp2Binding;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class Sign_up2 extends AppCompatActivity {
     private ActivitySignUp2Binding binding;
@@ -18,36 +27,27 @@ public class Sign_up2 extends AppCompatActivity {
         binding = ActivitySignUp2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        /*binding.CMPRegBut.setOnClickListener(new View.OnClickListener() {
+        binding.CMPRegBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth mAuth = FirebaseAuth.getInstance();
-                mAuth.createUserWithEmailAndPassword(Sign_up.Regemail, Regpassword)
-                        .addOnCompleteListener(Sign_up2.this, (OnCompleteListener<AuthResult>) task -> {
-                            if (task.isSuccessful()) {
-                                // Регистрация успешна
-                                FirebaseUser user = mAuth.getCurrentUser();
+                if (binding.NameSET.getText().toString().isEmpty() || binding.SurnameSET.getText().toString().isEmpty() || binding.selectClass.toString().isEmpty() || (!binding.RBTeacher.isChecked() && !binding.RBStudent.isChecked())) {
+                    Toast.makeText(Sign_up2.this,  "Заполните все поля", Toast.LENGTH_SHORT).show();
+                } else {
+                    Boolean isTeach;
+                    if (binding.RBStudent.isChecked()) {
+                        isTeach = false;
+                    } else {
+                        isTeach = true;
+                    }
+                    User user = new User();
+                    user.writeNewUser(Sign_up.Reglogin, Sign_up.Regemail, Sign_up.Regpassword, binding.NameSET.getText().toString(), binding.SurnameSET.getText().toString(), 1, isTeach);
+                    startActivity(new Intent(Sign_up2.this, MainActivity.class));
+                    Toast.makeText(Sign_up2.this, "Регистрация не удалась", Toast.LENGTH_LONG).show();
 
-                                // Добавляем данные пользователя в базу данных Firebase
-                                String userId = user.getUid();
-                                String login = Sign_up.Reglogin;
-                                String name = String.valueOf(R.id.NameS_ET);
-                                String surname = String.valueOf(R.id.SurnameS_ET);
-                                String fathername = String.valueOf(R.id.FNameS_ET);
-                                String classValue = String.valueOf(R.id.selectClass);
-                                String isTeacher = String.valueOf(binding.RBTeacher.isChecked());
-                                //User newUser = new User(login);
-
-                                DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("users");
-                                databaseRef.child(userId).setValue("jdfdj");
-                            } else {
-                                // Регистрация не удалась
-                                Toast.makeText(Sign_up2.this, "Ошибка регистрации.", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                }
             }
         });
-        */
+
 
 
         Spinner selectClass = findViewById(R.id.selectClass);

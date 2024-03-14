@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="65dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="65dp"
         android:hint="@string/EnterName"
         android:minHeight="56dp"
@@ -45,19 +45,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NameS_ET" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/FNameS_ET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="65dp"
-        android:hint="@string/FatherName"
-        android:minHeight="56dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SurnameS_ET" />
-
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -69,7 +56,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FNameS_ET"
+        app:layout_constraintTop_toBottomOf="@+id/SurnameS_ET"
         tools:ignore="MissingConstraints">
 
         <RadioButton
