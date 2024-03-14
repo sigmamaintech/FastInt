@@ -11,7 +11,6 @@ import android.widget.Toast;
 import com.example.fastint.databinding.ActivitySignInBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -42,9 +41,5 @@ public class Sign_in extends AppCompatActivity {
                 }
             }
         });
-    }
-    public void startSU (View v) {
-        Intent to_sign_up = new Intent(this, Sign_up.class);
-        startActivity(to_sign_up);
     }
 }

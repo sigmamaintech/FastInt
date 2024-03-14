@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             else if(item.getItemId() == R.id.testsFragment)
                 replaceFragment(new TestsFragment());
             else if(item.getItemId() == R.id.profileFramgent)
-                replaceFragment(new ProfileFramgent());
+                replaceFragment(new ProfileFragment());
             return true;
         });
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {

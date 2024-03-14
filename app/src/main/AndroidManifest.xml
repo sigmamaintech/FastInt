@@ -18,6 +18,10 @@
             android:name=".Sign_up2"
             android:exported="false" />
         <activity
+            android:name=".Sign_in"
+            android:exported="false" />
+
+        <activity
             android:name=".Sign_up"
             android:exported="false" />
         <activity
