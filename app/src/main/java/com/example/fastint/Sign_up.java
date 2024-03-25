@@ -1,11 +1,10 @@
 package com.example.fastint;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fastint.databinding.ActivitySignUpBinding;
 
@@ -23,16 +22,13 @@ public class Sign_up extends AppCompatActivity {
         binding = ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.NextPRBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (binding.newLogin.getText().toString().isEmpty() || binding.newPassword.getText().toString().isEmpty()) {
-                    Toast.makeText(Sign_up.this, "Заполните поля логина и пароля", Toast.LENGTH_SHORT).show();
-                } else if (!binding.newPassword.getText().toString().equals(binding.CNewPassword.getText().toString())) {
-                    Toast.makeText(Sign_up.this, "Пароли не совпадают", Toast.LENGTH_SHORT).show();
-                } else {
-                    startActivity(new Intent(Sign_up.this, Sign_up2.class));
-                }
+        binding.NextPRBtn.setOnClickListener(v -> {
+            if (binding.newLogin.getText().toString().isEmpty() || binding.newPassword.getText().toString().isEmpty()) {
+                Toast.makeText(Sign_up.this, "Заполните поля логина и пароля", Toast.LENGTH_SHORT).show();
+            } else if (!binding.newPassword.getText().toString().equals(binding.CNewPassword.getText().toString())) {
+                Toast.makeText(Sign_up.this, "Пароли не совпадают", Toast.LENGTH_SHORT).show();
+            } else {
+                startActivity(new Intent(Sign_up.this, Sign_up2.class));
             }
         });
     }
