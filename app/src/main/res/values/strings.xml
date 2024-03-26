@@ -4,9 +4,9 @@
     <string name="News" translatable="true">News</string>
     <string name="Themes" translatable="true">Themes</string>
     <string name="Tasks" translatable="true">Tasks</string>
-    <string name="EnterLogin">Enter Login</string>
-    <string name="EnterPassword">Enter Password</string>
-    <string name="EnterEmail">Enter E-mail</string>
+    <string name="EnterLogin">Enter login</string>
+    <string name="EnterPassword">Enter password</string>
+    <string name="EnterEmail">Enter e-mail</string>
     <string name="Authorization">Authorization</string>
     <string name="Registration">Registration</string>
     <string name="NextPage">Next page</string>

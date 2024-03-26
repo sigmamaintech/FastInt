@@ -1,66 +1,21 @@
 package com.example.fastint;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
-import android.content.Intent;
-
-import androidx.annotation.NonNull;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.IgnoreExtraProperties;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-@IgnoreExtraProperties
 public class User {
+    private String name, surname, login, email, password;
+    private int selClass;
+    private Boolean isTeacher;
 
-    public String username;
-    public String email;
-    public String password;
-    public String name;
-    public String surname;
-    public Integer selclass;
-    public Boolean isTeacher;
 
-    public User() {
-        // Default constructor required for calls to DataSnapshot.getValue(User.class)
-    }
+    public User() {}
 
-    public User(String username, String email, String password, String name, String surname, Integer selclass, Boolean isTeacher) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
+    public User(String name, String surname, String login, String email, String password, int selClass, Boolean isTeacher) {
         this.name = name;
         this.surname = surname;
-        this.selclass = selclass;
+        this.login = login;
+        this.email = email;
+        this.password = password;
+        this.selClass = selClass;
         this.isTeacher = isTeacher;
-    }
-
-    public Boolean getTeacher() {
-        return isTeacher;
-    }
-
-    public void setTeacher(Boolean teacher) {
-        isTeacher = teacher;
-    }
-
-    public Integer getSelclass() {
-        return selclass;
-    }
-
-    public void setSelclass(Integer selclass) {
-        this.selclass = selclass;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public String getName() {
@@ -71,12 +26,20 @@ public class User {
         this.name = name;
     }
 
-    public String getPassword() {
-        return password;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getEmail() {
@@ -87,11 +50,27 @@ public class User {
         this.email = email;
     }
 
-    public String getUsername() {
-        return username;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getSelClass() {
+        return selClass;
+    }
+
+    public void setSelClass(int selClass) {
+        this.selClass = selClass;
+    }
+
+    public Boolean getTeacher() {
+        return isTeacher;
+    }
+
+    public void setTeacher(Boolean teacher) {
+        isTeacher = teacher;
     }
 }

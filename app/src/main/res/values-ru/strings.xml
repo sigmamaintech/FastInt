@@ -6,7 +6,7 @@
     <string name="Tasks">Задания</string>
     <string name="EnterLogin">Введите логин</string>
     <string name="EnterPassword">Введите пароль</string>
-    <string name="EnterEmail">Введите E-mail</string>
+    <string name="EnterEmail">Введите e-mail</string>
     <string name="Authorization">Авторизоваться</string>
     <string name="Registration">Зарегистрироваться</string>
     <string name="NextPage">Следующая страница</string>
