@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/signinLogin"
+        android:id="@+id/signinEmail"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginStart="65dp"
@@ -51,13 +51,13 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="40dp"
         android:text="@string/Authorization"
-        app:layout_constraintBottom_toTopOf="@+id/RegButton"
+        app:layout_constraintBottom_toTopOf="@+id/regButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/RegButton"
+        android:id="@+id/regButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"

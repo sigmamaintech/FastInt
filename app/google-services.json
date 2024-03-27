@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "1067938672259",
-    "project_id": "fastint-206e1",
-    "storage_bucket": "fastint-206e1.appspot.com"
+    "project_number": "1082118295850",
+    "firebase_url": "https://fastint-927f3-default-rtdb.firebaseio.com",
+    "project_id": "fastint-927f3",
+    "storage_bucket": "fastint-927f3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1067938672259:android:f4a9c7bf41cc582525f5b6",
+        "mobilesdk_app_id": "1:1082118295850:android:88132acbd08f8c40a5ce53",
         "android_client_info": {
           "package_name": "com.example.fastint"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDxbRDCtrLjgXob_QGJT8A2Y7pas2g5NFA"
+          "current_key": "AIzaSyDG1uiQVF0b7nbd-VzxsDVUMquVgAmocss"
         }
       ],
       "services": {
