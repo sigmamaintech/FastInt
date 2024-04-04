@@ -1,4 +1,4 @@
-package com.example.fastint;
+package com.example.fastint.Models;
 
 public class User {
     private String name, surname, login, email, password;
