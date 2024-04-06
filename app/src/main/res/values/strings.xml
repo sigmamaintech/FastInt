@@ -21,4 +21,6 @@
     <string name="Tests">Tests</string>
     <string name="Profile">Profile</string>
     <string name="NotSU_SI">Login or password fields cannot be blank</string>
+    <string name="AlgSort">Sorting algorithms</string>
+    <string name="Mistake">Mistake</string>
 </resources>

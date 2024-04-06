@@ -32,7 +32,7 @@ public class LibraryFragment extends Fragment {
 
 
         // Создаем адаптер и устанавливаем его для ListView
-        adapter = new SectionAdapter(getActivity(), sections);
+        adapter = new SectionAdapter(getActivity(), sections, getFragmentManager());
         listView.setAdapter(adapter);
 
         return view;

@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.fastint.Models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -34,8 +35,8 @@ public class Sign_up2 extends AppCompatActivity {
         users = db.getReference("Users");
 
         regBtn = findViewById(R.id.CMPReg_But);
-        EditText name = findViewById(R.id.newName);
-        EditText surname = findViewById(R.id.newSurname);
+        EditText name = findViewById(R.id.NameS_ET);
+        EditText surname = findViewById(R.id.SurnameS_ET);
         Spinner selClass = findViewById(R.id.selectClass);
         RadioButton teacher = findViewById(R.id.RBTeacher);
         RadioButton student = findViewById(R.id.RBStudent);

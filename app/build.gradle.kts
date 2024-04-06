@@ -39,6 +39,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     buildToolsVersion = "34.0.0"
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -52,6 +55,9 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth:22.3.1")
     implementation("com.google.firebase:firebase-database:20.3.1")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     //implementation("androidx.room:room-compiler-processing-testing:2.6.1")
     //implementation("com.google.firebase:firebase-firestore:24.10.3")
     testImplementation("junit:junit:4.13.2")
