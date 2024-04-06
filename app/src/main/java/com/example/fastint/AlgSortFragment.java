@@ -23,7 +23,6 @@ public class AlgSortFragment extends Fragment {
         alg.add(new AlgSort("Подсчетом"));
         alg.add(new AlgSort("Быстрая сортировка (qsort)"));
 
-
         // Создаем адаптер и устанавливаем его для ListView
         AlgorithmAdapter adapter = new AlgorithmAdapter(getActivity(), alg);
         listView.setAdapter(adapter);

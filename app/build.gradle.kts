@@ -58,6 +58,13 @@ dependencies {
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    //implementation ("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
+    implementation ("com.google.firebase:firebase-storage:19.2.0") // Проверьте наличие последней версии
+    //implementation ("androidx.core:core:1.5.0") // Проверьте наличие последней версии
+    //implementation ("com.google.firebase:firebase-storage:latest_version")
+
+
+
     //implementation("androidx.room:room-compiler-processing-testing:2.6.1")
     //implementation("com.google.firebase:firebase-firestore:24.10.3")
     testImplementation("junit:junit:4.13.2")

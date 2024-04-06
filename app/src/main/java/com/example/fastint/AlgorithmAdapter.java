@@ -36,15 +36,15 @@ public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
         // Устанавливаем обработчик нажатия на кнопку
         textView.setOnClickListener(v -> {
             // Здесь код для открытия нового фрагмента
-            if (textView.equals("Алгоритмы сортировок")) {
+            if (textView.getText().equals("Пузырьковая")) {
 
-            } else if (textView.equals("Алгоритмы на строках")) {
+            } else if (textView.getText().equals("Подсчетом")) {
 
-            } else if (textView.equals("Алгоритмы на графах")) {
+            } else if (textView.getText().equals("Быстрая сортировка (qsort)")) {
 
-            } else if (textView.equals("Алгоритмы на отрезках")) {
+            } else if (textView.getText().equals("Алгоритмы на строках")) {
 
-            } else if (textView.equals("Алгоритмы на деревьях")) {
+            } else if (textView.getText().equals("Алгоритмы на строках")) {
 
             }
         });
