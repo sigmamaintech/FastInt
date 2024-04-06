@@ -1,8 +1,8 @@
 package com.example.fastint;
 
 public class Section {
-    private String title;
-    private int imageResourceId;
+    private final String title;
+    private final int imageResourceId;
 
     public Section(String title, int imageResourceId) {
         this.title = title;

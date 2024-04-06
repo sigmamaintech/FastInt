@@ -1,7 +1,7 @@
 package com.example.fastint;
 
 public class AlgSort {
-    private String title;
+    private final String title;
 
     public AlgSort(String title) {
         this.title = title;

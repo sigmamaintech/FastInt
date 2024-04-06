@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.fragment.app.Fragment;
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 
 import java.util.ArrayList;
@@ -22,8 +22,9 @@ public class SectionAdapter extends ArrayAdapter<Section> {
         this.fragmentManager = fragmentManager;
     }
 
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         // Получаем объект Section для текущей позиции
         Section section = getItem(position);
 
@@ -37,33 +38,31 @@ public class SectionAdapter extends ArrayAdapter<Section> {
         ImageView imageView = convertView.findViewById(R.id.imageView);
 
         // Устанавливаем текст и изображение из объекта Section
+        assert section != null;
         textView.setText(section.getTitle());
         imageView.setImageResource(section.getImageResourceId());
 
         // Устанавливаем обработчик нажатия на кнопку
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Здесь код для открытия нового фрагмента
-                AlgSortFragment AlgSortOpenerFragment = new AlgSortFragment();
-                /*Fragment newFragment = new AlgSortFragment();
-                Fragment newFragment = new AlgSortFragment();
-                Fragment newFragment = new AlgSortFragment();
-                Fragment newFragment = new AlgSortFragment();*/
-                if (textView.getText().equals("Алгоритмы сортировок")) {
-                    fragmentManager.beginTransaction()
-                            .replace(R.id.frame_layout, AlgSortOpenerFragment)
-                            .addToBackStack(null)
-                            .commit();
-                } else if (textView.getText().equals("Алгоритмы на строках")) {
+        textView.setOnClickListener(v -> {
+            // Здесь код для открытия нового фрагмента
+            AlgSortFragment AlgSortOpenerFragment = new AlgSortFragment();
+            /*Fragment newFragment = new AlgSortFragment();
+            Fragment newFragment = new AlgSortFragment();
+            Fragment newFragment = new AlgSortFragment();
+            Fragment newFragment = new AlgSortFragment();*/
+            if (textView.getText().equals("Алгоритмы сортировок")) {
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, AlgSortOpenerFragment)
+                        .addToBackStack(null)
+                        .commit();
+            } else if (textView.getText().equals("Алгоритмы на строках")) {
 
-                } else if (textView.getText().equals("Алгоритмы на графах")) {
+            } else if (textView.getText().equals("Алгоритмы на графах")) {
 
-                } else if (textView.getText().equals("Алгоритмы на отрезках")) {
+            } else if (textView.getText().equals("Алгоритмы на отрезках")) {
 
-                } else if (textView.getText().equals("Алгоритмы на деревьях")) {
+            } else if (textView.getText().equals("Алгоритмы на деревьях")) {
 
-                }
             }
         });
 
