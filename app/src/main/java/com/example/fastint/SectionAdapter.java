@@ -45,23 +45,23 @@ public class SectionAdapter extends ArrayAdapter<Section> {
             @Override
             public void onClick(View v) {
                 // Здесь код для открытия нового фрагмента
-                Fragment AlgSortOpenerFragment = new AlgSortFragment();
+                AlgSortFragment AlgSortOpenerFragment = new AlgSortFragment();
                 /*Fragment newFragment = new AlgSortFragment();
                 Fragment newFragment = new AlgSortFragment();
                 Fragment newFragment = new AlgSortFragment();
                 Fragment newFragment = new AlgSortFragment();*/
-                if (textView.equals("Алгоритмы сортировок")) {
+                if (textView.getText().equals("Алгоритмы сортировок")) {
                     fragmentManager.beginTransaction()
-                            .replace(R.id.testsFragment, AlgSortOpenerFragment)
+                            .replace(R.id.frame_layout, AlgSortOpenerFragment)
                             .addToBackStack(null)
                             .commit();
-                } else if (textView.equals("Алгоритмы на строках")) {
+                } else if (textView.getText().equals("Алгоритмы на строках")) {
 
-                } else if (textView.equals("Алгоритмы на графах")) {
+                } else if (textView.getText().equals("Алгоритмы на графах")) {
 
-                } else if (textView.equals("Алгоритмы на отрезках")) {
+                } else if (textView.getText().equals("Алгоритмы на отрезках")) {
 
-                } else if (textView.equals("Алгоритмы на деревьях")) {
+                } else if (textView.getText().equals("Алгоритмы на деревьях")) {
 
                 }
             }
