@@ -23,5 +23,6 @@
     <string name="NotSU_SI">Поля логина или пароля не могут быть пустыми</string>
     <string name="AlgSort">Алгоритмы сортировок</string>
     <string name="Mistake">Ошибка</string>
+    <string name="S_Out">Выйти из аккаунта</string>
 
 </resources>

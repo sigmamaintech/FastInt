@@ -1,5 +1,6 @@
 package com.example.fastint;
 
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,9 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 
 public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
+    public static String FileName;
+    public static TextView textView;
+
     public AlgorithmAdapter(Context context, ArrayList<AlgSort> sections) {
         super(context, 0, sections);
     }
@@ -27,7 +31,7 @@ public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
         }
 
         // Находим элементы view и устанавливаем данные
-        TextView textView = convertView.findViewById(R.id.button);
+        textView = convertView.findViewById(R.id.button);
 
         // Устанавливаем текст и изображение из объекта Section
         assert section != null;
@@ -37,7 +41,9 @@ public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
         textView.setOnClickListener(v -> {
             // Здесь код для открытия нового фрагмента
             if (textView.getText().equals("Пузырьковая")) {
-
+                FileName = "Пузырьковая сортировка";
+                //Intent intent = new Intent(getApplicationContext(), PdfViewerActivity.class);
+                //startActivity(intent);
             } else if (textView.getText().equals("Подсчетом")) {
 
             } else if (textView.getText().equals("Быстрая сортировка (qsort)")) {

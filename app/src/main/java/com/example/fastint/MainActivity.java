@@ -1,5 +1,9 @@
 package com.example.fastint;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+//import static com.example.fastint.AlgorithmAdapter.textView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +14,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.fastint.R.id;
 import com.example.fastint.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
-    View view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed(); // Вызовите реализацию суперкласса, если Back Stack пуст
         }
     }
-
-
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

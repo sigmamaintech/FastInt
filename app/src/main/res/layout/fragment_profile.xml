@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#AA00FF"
-    tools:context=".ProfileFragment">
+    android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/profile_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="#26E0F8"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
+        android:padding="16dp"
         android:text="@string/Profile"
-        android:textColor="@color/white"
         android:textSize="30sp" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/sout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="350dp"
+        android:text="@string/S_Out"
+        android:textColor="@color/yellow" />
+<!--        android:fontFamily="@font/alata"-->
+
+
+</RelativeLayout>
