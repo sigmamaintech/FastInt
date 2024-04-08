@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#AA00FF"
-    tools:context=".NewsFragment">
+    android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/news_text"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="30sp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:background="#26E0F8"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
-        android:textColor="@color/white"
-        android:text="@string/News" />
+        android:padding="16dp"
+        android:text="@string/News"
+        android:textSize="30sp" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/news_img"
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:layout_below="@+id/news_text"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/trofim" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/news_img"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/VSOSH"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
