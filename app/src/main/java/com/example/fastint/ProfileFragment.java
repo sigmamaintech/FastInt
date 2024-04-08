@@ -29,7 +29,6 @@ public class ProfileFragment extends Fragment {
                 Intent intent = new Intent(getContext(), Sign_in.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Очистка стека задач
                 startActivity(intent);
-                //finish();
             }
         });
         return view;
