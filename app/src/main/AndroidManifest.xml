@@ -16,7 +16,7 @@
         android:theme="@style/Theme.FastInt"
         tools:targetApi="31">
         <activity
-            android:name=".PdfViewerActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Sign_up2"
@@ -28,7 +28,7 @@
             android:name=".Sign_up"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".PdfViewerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

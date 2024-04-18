@@ -1,57 +1,40 @@
 package com.example.fastint;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
-//import android.content.Intent;
-//import android.net.Uri;
-//import android.os.Bundle;
-//import android.widget.Toast;
-//import androidx.annotation.NonNull;
-//import androidx.core.content.FileProvider;
-//
-//import com.google.android.gms.tasks.OnFailureListener;
-//import com.google.android.gms.tasks.OnSuccessListener;
-//import com.google.firebase.storage.FileDownloadTask;
-//import com.google.firebase.storage.FirebaseStorage;
-//import com.google.firebase.storage.StorageReference;
-
-import java.io.File;
+import android.os.Build;
+import android.os.Bundle;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class PdfViewerActivity extends Activity {
 
-    //    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        // Установите макет для вашей активности, если это необходимо
-//
-//        // Инициализируйте Firebase Storage
-//        FirebaseStorage storage = FirebaseStorage.getInstance();
-//        StorageReference storageRef = storage.getReference();
-//        StorageReference pdfRef = storageRef.child("Library/Algorithms/AlgSort/" + AlgorithmAdapter.FileName);
-//
-//        // Создайте локальный файл для сохранения PDF
-//        final File localFile = new File(getExternalFilesDir(null), "downloaded_pdf.pdf");
-//
-//        pdfRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-//            @Override
-//            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
-//                // Файл успешно загружен и сохранен локально
-//                openPdf(localFile);
-//            }
-//        }).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception exception) {
-//                // Обработка ошибок
-//                Toast.makeText(PdfViewerActivity.this, "Ошибка загрузки файла: " + exception.getMessage(), Toast.LENGTH_LONG).show();
-//            }
-//        });
-//    }
-//
-//    private void openPdf(File file) {
-//        // Получите URI для файла с использованием FileProvider
-//        Uri uri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
-//        // Создайте намерение для открытия PDF-файла
-//        Intent intent = new Intent(Intent.ACTION_VIEW);
-//        intent.setDataAndType(uri, "application/pdf");
-//        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-//        startActivity(intent);
-//    }
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_pdf_viewer);
+
+        WebView webView = findViewById(R.id.webView);
+        webView.setWebViewClient(new MyWebViewClient());
+        // включаем поддержку JavaScript
+        webView.getSettings().setJavaScriptEnabled(true);
+        // указываем страницу загрузки
+        webView.loadUrl("https://drive.google.com/file/d/1kkpr3QD6lbCGWbEqcCoT9YL8nqFbGs6r/view"); //сюда нужную вставить (я загружал на гугл диск saddamhussein
+    }
+    private class MyWebViewClient extends WebViewClient {
+        @TargetApi(Build.VERSION_CODES.N)
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+            view.loadUrl(request.getUrl().toString());
+            return true;
+        }
+
+        // Для старых устройств
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            view.loadUrl(url);
+            return true;
+        }
+    }
 }
