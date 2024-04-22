@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
     public static String FileName;
-    public static TextView textView;
+    private static TextView textView;
     private final Context context;
 
     public AlgorithmAdapter(Context context, ArrayList<AlgSort> sections) {
@@ -44,13 +44,13 @@ public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
         // Устанавливаем обработчик нажатия на кнопку
         textView.setOnClickListener(v -> {
             // Здесь код для открытия нового фрагмента
-            if (textView.getText().equals("Пузырьковая")) {
+            if (section.getTitle().equals("Пузырьковая")) {
                 FileName = "bubble";
-            } else if (textView.getText().equals("Вставками")) {
+            } else if (section.getTitle().equals("Вставками")) {
                 FileName = "insert";
-            } else if (textView.getText().equals("Быстрая сортировка (qsort)")) {
+            } else if (section.getTitle().equals("Быстрая сортировка (qsort)")) {
                 FileName = "qsort";
-            } else if (textView.getText().equals("Выбором")) {
+            } else if (section.getTitle().equals("Выбором")) {
                 FileName = "selection";
             }
             context.startActivity(new Intent(context, PdfViewerActivity.class));
