@@ -1,25 +1,18 @@
 package com.example.fastint;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
-//import static com.example.fastint.AlgorithmAdapter.textView;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.fastint.R.id;
 import com.example.fastint.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
+
     ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
