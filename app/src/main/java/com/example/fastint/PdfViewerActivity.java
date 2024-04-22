@@ -1,7 +1,5 @@
 package com.example.fastint;
 
-import static android.app.PendingIntent.getActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,14 +27,19 @@ public class PdfViewerActivity extends Activity {
         finish();
     }
     void LoadUrl(WebView webView) { // Эта функция в зависимости от названия из адаптера подгружает нужную ссылку
-        if(AlgorithmAdapter.FileName.equals("bubble")) {
-            webView.loadUrl("https://drive.google.com/file/d/11K_muj2VroLWPbrPIjhn8s9Ekb202MiM/view");
-        } else if(AlgorithmAdapter.FileName.equals("insert")) {
-            webView.loadUrl("https://drive.google.com/file/d/11SWP6cc8SnN_0HDwujse4IM0scJXuohX/view");
-        } else if(AlgorithmAdapter.FileName.equals("qsort")) {
-            webView.loadUrl("https://drive.google.com/file/d/1RdMD0oSsjDfSOaQjmdU3M-KLBcp43rjZ/view");
-        } else if(AlgorithmAdapter.FileName.equals("selection")) {
-            webView.loadUrl("https://drive.google.com/file/d/1_AnuCcw-7JpfXb7lGzN6ql1qxm8JCu98/view");
+        switch (AlgorithmAdapter.FileName) {
+            case "bubble":
+                webView.loadUrl("https://drive.google.com/file/d/11K_muj2VroLWPbrPIjhn8s9Ekb202MiM/view");
+                break;
+            case "insert":
+                webView.loadUrl("https://drive.google.com/file/d/11SWP6cc8SnN_0HDwujse4IM0scJXuohX/view");
+                break;
+            case "qsort":
+                webView.loadUrl("https://drive.google.com/file/d/1RdMD0oSsjDfSOaQjmdU3M-KLBcp43rjZ/view");
+                break;
+            case "selection":
+                webView.loadUrl("https://drive.google.com/file/d/1_AnuCcw-7JpfXb7lGzN6ql1qxm8JCu98/view");
+                break;
         }
     }
     private static class MyWebViewClient extends WebViewClient {
