@@ -1,7 +1,6 @@
 package com.example.fastint;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -16,7 +15,6 @@ import java.util.ArrayList;
 
 public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
     public static String FileName;
-    private static TextView textView;
     private final Context context;
 
     public AlgorithmAdapter(Context context, ArrayList<AlgSort> sections) {
@@ -35,7 +33,7 @@ public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
         }
 
         // Находим элементы view и устанавливаем данные
-        textView = convertView.findViewById(R.id.button);
+        TextView textView = convertView.findViewById(R.id.button);
 
         // Устанавливаем текст и изображение из объекта Section
         assert section != null;
@@ -44,14 +42,19 @@ public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
         // Устанавливаем обработчик нажатия на кнопку
         textView.setOnClickListener(v -> {
             // Здесь код для открытия нового фрагмента
-            if (section.getTitle().equals("Пузырьковая")) {
-                FileName = "bubble";
-            } else if (section.getTitle().equals("Вставками")) {
-                FileName = "insert";
-            } else if (section.getTitle().equals("Быстрая сортировка (qsort)")) {
-                FileName = "qsort";
-            } else if (section.getTitle().equals("Выбором")) {
-                FileName = "selection";
+            switch (section.getTitle()) {
+                case "Пузырьковая":
+                    FileName = "bubble";
+                    break;
+                case "Вставками":
+                    FileName = "insert";
+                    break;
+                case "Быстрая сортировка (qsort)":
+                    FileName = "qsort";
+                    break;
+                case "Выбором":
+                    FileName = "selection";
+                    break;
             }
             context.startActivity(new Intent(context, PdfViewerActivity.class));
         });
