@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, Sign_in.class));
         }
     }
+
     @Override
     public void onBackPressed() {
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed(); // Вызовите реализацию суперкласса, если Back Stack пуст
         }
     }
+
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
