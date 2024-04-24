@@ -40,6 +40,18 @@ public class PdfViewerActivity extends Activity {
             case "selection":
                 webView.loadUrl("https://drive.google.com/file/d/1_AnuCcw-7JpfXb7lGzN6ql1qxm8JCu98/view");
                 break;
+            case "memory":
+                webView.loadUrl("https://drive.google.com/file/d/13F52Yng9INK7_bmyQ-YVWG9oAhqRXimO/view");
+                break;
+            case "dfs":
+                webView.loadUrl("https://drive.google.com/file/d/1z2w4przQ0nxlv9kvMp88g0qqIsMMiGrT/view");
+                break;
+            case "bfs":
+                webView.loadUrl("https://drive.google.com/file/d/1EAvSSb5IoEO8KnT3JA1iFxJxo-mRmn6e/view");
+                break;
+            case "topSort":
+                webView.loadUrl("https://drive.google.com/file/d/1FZciqKJ46_iBiBwNiXQrmrc_r2dHK2as/view?usp=sharing");
+                break;
         }
     }
     private static class MyWebViewClient extends WebViewClient {

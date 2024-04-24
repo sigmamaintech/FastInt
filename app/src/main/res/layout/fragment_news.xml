@@ -8,11 +8,12 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
-        android:background="#26E0F8"
+        android:background="#673AB7"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:padding="16dp"
         android:text="@string/News"
+        android:textColor="#FFFFFF"
         android:textSize="30sp" />
 
     <ImageView

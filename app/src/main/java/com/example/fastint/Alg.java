@@ -1,9 +1,9 @@
 package com.example.fastint;
 
-public class AlgSort {
+public class Alg {
     private final String title;
 
-    public AlgSort(String title) {
+    public Alg(String title) {
         this.title = title;
     }
 

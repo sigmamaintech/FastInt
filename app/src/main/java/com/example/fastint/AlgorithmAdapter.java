@@ -13,11 +13,11 @@ import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 
-public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
+public class AlgorithmAdapter extends ArrayAdapter<Alg> {
     public static String FileName;
     private final Context context;
 
-    public AlgorithmAdapter(Context context, ArrayList<AlgSort> sections) {
+    public AlgorithmAdapter(Context context, ArrayList<Alg> sections) {
         super(context, 0, sections);
         this.context = context;
     }
@@ -25,7 +25,7 @@ public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
     @NonNull
     @Override
     public View getView(int position, View convertView, @NonNull ViewGroup parent) {
-        AlgSort section = getItem(position);
+        Alg section = getItem(position);
 
         // Если view еще не создан, инфлируем его
         if (convertView == null) {
@@ -54,6 +54,18 @@ public class AlgorithmAdapter extends ArrayAdapter<AlgSort> {
                     break;
                 case "Выбором":
                     FileName = "selection";
+                    break;
+                case "Представление графов в памяти":
+                    FileName = "memory";
+                    break;
+                case "Поиск в глубину (DFS)":
+                    FileName = "dfs";
+                    break;
+                case "Поиск в ширину (BFS)":
+                    FileName = "bfs";
+                    break;
+                case "Топологическая сортировка":
+                    FileName = "topSort";
                     break;
             }
             context.startActivity(new Intent(context, PdfViewerActivity.class));

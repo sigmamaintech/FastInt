@@ -46,6 +46,7 @@ public class SectionAdapter extends ArrayAdapter<Section> {
         textView.setOnClickListener(v -> {
             // Здесь код для открытия нового фрагмента
             AlgSortFragment AlgSortOpenerFragment = new AlgSortFragment();
+            GraphsFragment GraphsOpenerFragment = new GraphsFragment();
             /*Fragment newFragment = new AlgSortFragment();
             Fragment newFragment = new AlgSortFragment();
             Fragment newFragment = new AlgSortFragment();
@@ -58,7 +59,10 @@ public class SectionAdapter extends ArrayAdapter<Section> {
             } else if (textView.getText().equals("Алгоритмы на строках")) {
 
             } else if (textView.getText().equals("Алгоритмы на графах")) {
-
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, GraphsOpenerFragment)
+                        .addToBackStack(null)
+                        .commit();
             } else if (textView.getText().equals("Алгоритмы на отрезках")) {
 
             } else if (textView.getText().equals("Алгоритмы на деревьях")) {

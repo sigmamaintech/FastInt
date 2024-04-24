@@ -10,18 +10,18 @@ import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
-public class AlgSortFragment extends Fragment {
+public class GraphsFragment extends Fragment {
     ArrayList<Alg> alg = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_algsort, container, false);
+        View view = inflater.inflate(R.layout.fragment_graphs, container, false);
         ListView listView = view.findViewById(R.id.list_view);
 
         // Заполняем список данными
-        alg.add(new Alg("Пузырьковая"));
-        alg.add(new Alg("Вставками"));
-        alg.add(new Alg("Выбором"));
-        alg.add(new Alg("Быстрая сортировка (qsort)"));
+        alg.add(new Alg("Представление графов в памяти"));
+        alg.add(new Alg("Поиск в глубину (DFS)"));
+        alg.add(new Alg("Поиск в ширину (BFS)"));
+        alg.add(new Alg("Топологическая сортировка"));
 
         // Создаем адаптер и устанавливаем его для ListView
         AlgorithmAdapter adapter = new AlgorithmAdapter(getActivity(), alg);
