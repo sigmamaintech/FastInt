@@ -1,7 +1,6 @@
 package com.example.fastint;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
@@ -20,11 +19,6 @@ public class PdfViewerActivity extends Activity {
         webView.getSettings().setJavaScriptEnabled(true);
         // Загружаем LoadUrl
         LoadUrl(webView);
-    }
-    public void onBackPressed(){
-        Intent intent = new Intent(this, AlgSortFragment.class);
-        startActivity(intent);
-        finish();
     }
     void LoadUrl(WebView webView) { // Эта функция в зависимости от названия из адаптера подгружает нужную ссылку
         switch (AlgorithmAdapter.FileName) {

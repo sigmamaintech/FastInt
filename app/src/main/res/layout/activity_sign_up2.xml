@@ -29,6 +29,7 @@
         android:layout_marginEnd="65dp"
         android:hint="@string/EnterName"
         android:minHeight="56dp"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SUFapp_name" />
@@ -42,6 +43,7 @@
         android:layout_marginEnd="65dp"
         android:hint="@string/EnterSurname"
         android:minHeight="56dp"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NameS_ET" />

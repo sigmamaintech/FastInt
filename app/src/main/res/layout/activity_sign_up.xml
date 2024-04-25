@@ -60,7 +60,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="30dp"
-        android:onClick="onClickSave1"
         android:text="@string/NextPage"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -23,8 +23,8 @@ public class Sign_in extends AppCompatActivity {
 
         loginBtn.setOnClickListener(v -> {
             if (email.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
-                Toast.makeText(getApplicationContext(), "Login or password fields cannot be blank", Toast.LENGTH_SHORT).show();
-            }else {
+                Toast.makeText(getApplicationContext(), "Поля логина и пароля не должны быть пустыми", Toast.LENGTH_SHORT).show();
+            } else {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
                         .addOnCompleteListener(task -> {
                             if(task.isSuccessful()) {
