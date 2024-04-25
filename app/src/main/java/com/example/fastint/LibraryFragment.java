@@ -22,9 +22,9 @@ public class LibraryFragment extends Fragment {
         ArrayList<Section> sections = new ArrayList<>();
         // Заполняем список данными
         sections.add(new Section("Алгоритмы сортировок", R.drawable.sorting_algorithms));
-        sections.add(new Section("Алгоритмы на строках", R.drawable.string_algorithms));
         sections.add(new Section("Алгоритмы на графах", R.drawable.graf_alg));
-        sections.add(new Section("Алгоритмы на отрезках", R.drawable.baseline_analytics_24));
+        sections.add(new Section("Алгоритмы на строках", R.drawable.string_algorithms));
+        sections.add(new Section("Динамическое программирование", R.drawable.baseline_analytics_24));
         sections.add(new Section("Алгоритмы на деревьях", R.drawable.baseline_analytics_24));
 
 
