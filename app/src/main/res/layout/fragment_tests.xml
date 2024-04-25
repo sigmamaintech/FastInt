@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AA00FF"
+    android:background="#FFFFFF"
     tools:context=".TestsFragment">
 
     <TextView
@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:textSize="30sp"
         android:gravity="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:text="@string/Tests" />
 
 </FrameLayout>
