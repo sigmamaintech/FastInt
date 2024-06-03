@@ -1,5 +1,6 @@
 package com.example.fastint;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -35,19 +36,29 @@ public class ProfileFragment extends Fragment {
         Button SOut = view.findViewById(R.id.sout);
         TextView Name = view.findViewById(R.id.name);
         TextView Surname = view.findViewById(R.id.surname);
+        TextView E_mail = view.findViewById(R.id.email);
+        TextView Status = view.findViewById(R.id.status);
 
         if (currentUser != null) {
 
             String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
             users.child("Users").child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
+                @SuppressLint("ResourceAsColor")
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     User user = dataSnapshot.getValue(User.class);
                     if (user != null) {
                         Name.setText(user.getName());
                         Surname.setText(user.getSurname());
+                        E_mail.setText(user.getEmail());
+                        if (user.getTeacher()) {
+                            Status.setText("Учитель");
+                        }
+                        else {
+                            Status.setText("Ученик");
+                        }
                     } else {
-
+                        Toast.makeText(getContext(), "Пользователь не найден, проверьте подключение к интернету", Toast.LENGTH_SHORT).show();
                     }
                 }
 

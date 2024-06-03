@@ -60,7 +60,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:gravity="left"
-        android:text="TextView"
+        android:text="Учитель"
         android:textSize="20sp"
         android:textColor="@color/red" />
 
@@ -75,7 +75,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:gravity="left"
-        android:text="TextView"
+        android:text="Артем"
         android:textSize="20sp"  />
 
     <TextView
@@ -89,7 +89,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:gravity="left"
-        android:text="TextView"
+        android:text="Сидоров"
         android:textSize="20sp"  />
 
     <TextView
@@ -105,7 +105,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="340dp"
         android:gravity="center"
-        android:text="TextView"
+        android:text="test@gmail.com"
         android:textSize="20sp" />
     <!--        android:fontFamily="@font/alata"-->
 
