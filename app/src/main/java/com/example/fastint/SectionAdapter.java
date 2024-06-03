@@ -65,7 +65,6 @@ public class SectionAdapter extends ArrayAdapter<Section> {
                         .commit();
             }
         });
-
         return convertView;
     }
 }
