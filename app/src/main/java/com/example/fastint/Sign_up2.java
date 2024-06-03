@@ -64,16 +64,20 @@ public class Sign_up2 extends AppCompatActivity {
                                 FirebaseUser firebaseUser = auth.getCurrentUser();
                                 if (firebaseUser != null) {
                                     String uid = firebaseUser.getUid();
-                                    users.child("Users").child(uid).setValue(user)
-                                            .addOnCompleteListener(dbTask -> {
-                                                if (dbTask.isSuccessful()) {
-                                                    Toast.makeText(Sign_up2.this, "Пользователь добавлен!", Toast.LENGTH_SHORT).show();
-                                                    startActivity(new Intent(Sign_up2.this, MainActivity.class));
-                                                    finish(); // Завершаем текущую активность
-                                                } else {
-                                                    // Обработка ошибок добавления пользователя в Realtime Database
-                                                }
-                                            });
+                                    Toast.makeText(Sign_up2.this, "Пользователь добавлен!", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(Sign_up2.this, MainActivity.class));
+                                    finish(); // Завершаем текущую активность
+//                                    users.child("Users").child(uid).setValue(user)
+//                                            .addOnCompleteListener(dbTask -> {
+//                                                if (dbTask.isSuccessful()) {
+//                                                    // Не работает, потому что не подтверждена FirebaseDatabase
+//                                                    Toast.makeText(Sign_up2.this, "Пользователь добавлен!", Toast.LENGTH_SHORT).show();
+//                                                    startActivity(new Intent(Sign_up2.this, MainActivity.class));
+//                                                    finish(); // Завершаем текущую активность
+//                                                } else {
+//                                                    // Обработка ошибок добавления пользователя в Realtime Database
+//                                                }
+//                                            });
                                 }
                             } else {
                                 // Обработка ошибок регистрации пользователя
