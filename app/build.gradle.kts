@@ -58,6 +58,7 @@ dependencies {
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation ("com.google.firebase:firebase-appcheck-safetynet:16.0.0-beta01")
     //implementation ("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
 //    implementation ("com.google.firebase:firebase-storage:20.3.0") // Проверьте наличие последней версии
 //    implementation ("androidx.core:core:1.12.0") // Проверьте наличие последней версии

@@ -15,8 +15,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fastint.Models.User;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class Sign_up2 extends AppCompatActivity {
@@ -42,24 +46,38 @@ public class Sign_up2 extends AppCompatActivity {
         RadioButton student = findViewById(R.id.RBStudent);
         regBtn.setOnClickListener(v -> {
             if (TextUtils.isEmpty(name.getText().toString()) || TextUtils.isEmpty(surname.getText().toString()) || (!teacher.isChecked() && !student.isChecked())) {
-                Toast.makeText(Sign_up2.this,  "Заполните все поля", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Sign_up2.this, "Заполните все поля", Toast.LENGTH_SHORT).show();
             } else {
                 boolean isTeach = teacher.isChecked();
-                auth.createUserWithEmailAndPassword(Sign_up.email, Sign_up.password)
-                        .addOnSuccessListener(authResult -> {
-                            User user = new User();
-                            user.setLogin(Sign_up.login);
-                            user.setEmail(Sign_up.email);
-                            user.setPassword(Sign_up.password);
-                            user.setName(name.getText().toString());
-                            user.setSurname(surname.getText().toString());
-                            user.setTeacher(isTeach);
-                            user.setSelClass(Integer.parseInt(selClass.getSelectedItem().toString()));
-                            users.child(user.getEmail()).setValue(user)
-                                    .addOnSuccessListener(aVoid -> {
-                                        Toast.makeText(Sign_up2.this, "Пользователь добавлен!", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(Sign_up2.this, MainActivity.class));
-                                    });
+                User user = new User();
+                user.setLogin(Sign_up.login);
+                user.setEmail(Sign_up.email);
+                user.setPassword(Sign_up.password);
+                user.setName(name.getText().toString());
+                user.setSurname(surname.getText().toString());
+                user.setTeacher(isTeach);
+                user.setSelClass(Integer.parseInt(selClass.getSelectedItem().toString()));
+                auth.createUserWithEmailAndPassword(user.getEmail(), user.getPassword())
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                // Шаг 2: Получение UID зарегистрированного пользователя
+                                FirebaseUser firebaseUser = auth.getCurrentUser();
+                                if (firebaseUser != null) {
+                                    String uid = firebaseUser.getUid();
+                                    users.child("Users").child(uid).setValue(user)
+                                            .addOnCompleteListener(dbTask -> {
+                                                if (dbTask.isSuccessful()) {
+                                                    Toast.makeText(Sign_up2.this, "Пользователь добавлен!", Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(Sign_up2.this, MainActivity.class));
+                                                    finish(); // Завершаем текущую активность
+                                                } else {
+                                                    // Обработка ошибок добавления пользователя в Realtime Database
+                                                }
+                                            });
+                                }
+                            } else {
+                                // Обработка ошибок регистрации пользователя
+                            }
                         });
             }
         });
