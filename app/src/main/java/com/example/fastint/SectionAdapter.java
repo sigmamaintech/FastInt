@@ -47,6 +47,7 @@ public class SectionAdapter extends ArrayAdapter<Section> {
             // Здесь код для открытия нового фрагмента
             AlgSortFragment AlgSortOpenerFragment = new AlgSortFragment();
             GraphsFragment GraphsOpenerFragment = new GraphsFragment();
+            SegTreeFragment SegTreeOpenerFragment  = new SegTreeFragment();
             if (textView.getText().equals("Алгоритмы сортировок")) {
                 fragmentManager.beginTransaction()
                         .replace(R.id.frame_layout, AlgSortOpenerFragment)
@@ -57,12 +58,11 @@ public class SectionAdapter extends ArrayAdapter<Section> {
                         .replace(R.id.frame_layout, GraphsOpenerFragment)
                         .addToBackStack(null)
                         .commit();
-            } else if (textView.getText().equals("Алгоритмы на строках")) {
-
-            }else if (textView.getText().equals("Алгоритмы на отрезках")) {
-
             } else if (textView.getText().equals("Алгоритмы на деревьях")) {
-
+                fragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout, SegTreeOpenerFragment)
+                        .addToBackStack(null)
+                        .commit();
             }
         });
 

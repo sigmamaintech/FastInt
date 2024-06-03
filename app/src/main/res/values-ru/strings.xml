@@ -26,4 +26,5 @@
     <string name="S_Out">Выйти из аккаунта</string>
     <string name="Graphs">Графы</string>
     <string name="User_Info">Информация о пользователе</string>
+    <string name="segTree">Дерево отрезков</string>
 </resources>

@@ -67,6 +67,24 @@ public class AlgorithmAdapter extends ArrayAdapter<Alg> {
                 case "Топологическая сортировка":
                     FileName = "topSort";
                     break;
+                case "Структура дерево отрезков. Базовые операции":
+                    FileName = "segbase";
+                    break;
+                case "Отрезок с максимальной суммой, максимальная последовательность нулей, последовательность возрастающая на 1":
+                    FileName = "segmaxsum";
+                    break;
+                case "Ближайший меньший на отрезке, К-я единица":
+                    FileName = "segked";
+                    break;
+                case "Массовые операции. Прибавление на отрезке и значение в точке":
+                    FileName = "segmasprib";
+                    break;
+                case "Массовые операции. Прибавление и минимум на отрезке":
+                    FileName = "segmasmin";
+                    break;
+                case "Массовые операции. Проталкивание":
+                    FileName = "segmaspush";
+                    break;
             }
             context.startActivity(new Intent(context, PdfViewerActivity.class));
         });
